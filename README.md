@@ -41,10 +41,7 @@ Whenever we are creating pipeline, it is best practice to test application local
 
 ## Setup ArgoCD in Minikube
 
-Note: You can setup Argo CD in any cluster, instructions are same. 
-
 - First install Minikube:
-    Installation guide for installing Minikube. 
     [Minikube.sigs.k8s.io](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download)
 
 ---
@@ -76,43 +73,9 @@ Note: You can setup Argo CD in any cluster, instructions are same.
     minikube service argocd-server -n argocd
     ```
 ---
-Setup our Continous deployment. 
-
-- Select New App.
-![alt text](imgs/setting1.png)
-![alt text](imgs/setting2.png)
----
-- Syncing your manifests files:
-![alt text](imgs/sync.png)
----
-
-- Successfully Deployed our app:
-![alt text](imgs/deployed.png)
+Setup CD pipeline in ArgoCD UI. 
 ---
 Access Application with below command.
 ```
 minikube service list
 ```
-Output
-```
-|-------------|-----------------------------------------|--------------|-----------------------------|
-|  NAMESPACE  |                  NAME                   | TARGET PORT  |             URL             |
-|-------------|-----------------------------------------|--------------|-----------------------------|
-| argocd      | argocd-applicationset-controller        | No node port |                             |
-| argocd      | argocd-dex-server                       | No node port |                             |
-| argocd      | argocd-metrics                          | No node port |                             |
-| argocd      | argocd-notifications-controller-metrics | No node port |                             |
-| argocd      | argocd-redis                            | No node port |                             |
-| argocd      | argocd-repo-server                      | No node port |                             |
-| argocd      | argocd-server                           | http/80      | http://172.29.213.129:30692 |
-|             |                                         | https/443    | http://172.29.213.129:31365 |
-| argocd      | argocd-server-metrics                   | No node port |                             |
-| default     | kubernetes                              | No node port |                             |
-| default     | weather-check-service                   |         5000 | http://172.29.213.129:30008 |
-| kube-system | kube-dns                                | No node port |                             |
-|-------------|-----------------------------------------|--------------|-----------------------------|
-```
----
-Application running on http://172.29.213.129:30008
-
-![alt text](imgs/application.png)
