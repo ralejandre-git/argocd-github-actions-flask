@@ -1,40 +1,5 @@
-# Complete CI/CD DevOps Project 🚀
 ### Deploy Python Flask App on Kubernetes cluster with GitOps Approach. 
 
-![alt text](imgs/arch.png)
-
----
-### Workflow:
-Whenever Developer writing/changes a code and push into master/main branch, GitHub Pipeline will triggered and it will test the code with Flake8 and containerized the application with new tag and push into artifacts(dockerhub) and also GitHub Actions pipeline will update Kubernetes Manifests file with new image tag then ArgoCD will look for new changes in Manifests file and will rollout new application in kubernetes. 
-```
-│   app.py
-│   LICENSE
-│   README.md
-│   requirements.txt
-│
-├───deploy
-│       deploy.yaml
-│       svc.yaml
-│
-├───static
-│       style.css
-│
-└───templates
-        index.html
-```
----
-#### What you will learn:
-- Git for version control
-- VS Code Editor
-- Docker for testing locally
-- Minikube for Kubernetes 1 Node Arch. 
-- GitHub for storing code
-- GitHub Actions for Continous Integrity Pipeline 
-- ArgoCD for Continous Deployment Pipeline
-- Python Application
-    - Flask Framework
-    - Flake8 Module for Linting testing  
----
 ## Test Application Locally. 
 Whenever we are creating pipeline, it is best practice to test application locally.
 - Application prequisities. 
